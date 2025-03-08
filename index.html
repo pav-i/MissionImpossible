@@ -3,44 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Dashboard</title>
+    <title>Financial Literacy & Budgeting Platform</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Expense Tracker</a></li>
-            <li><a href="#">Budget Planner</a></li>
-            <li><a href="#">Savings Goals</a></li>
-            <li><a href="#">Bill Reminders</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#expense-tracker">Expense Tracker</a></li>
+            <li><a href="#budget-planner">Budget Planner</a></li>
+            <li><a href="#savings-goals">Savings Goals</a></li>
+            <li><a href="#bill-reminders">Bill Reminders</a></li>
         </ul>
     </nav>
 
-    <header>
-        <h1>Welcome to Your Financial Dashboard</h1>
-    </header>
-
-    <section class="overview">
-        <div class="card">
-            <h2>Total Expenses</h2>
-            <p>$1200</p>
-        </div>
-        <div class="card">
-            <h2>Monthly Budget</h2>
-            <p>$2000</p>
-        </div>
-        <div class="card">
-            <h2>Savings Goals</h2>
-            <p>$5000</p>
-        </div>
+    <section id="dashboard">
     </section>
 
-    <section class="charts">
-        <div id="expense-chart">Expense Chart Placeholder</div>
-        <div id="savings-chart">Savings Chart Placeholder</div>
+    <section id="expense-tracker">
+        <h2>Expense Tracker</h2>
+        <input type="file" id="file-input" accept=".csv">
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </section>
 
+    <section id="budget-planner">
+        <h2>Budget Planner</h2>
+        <form id="budget-form">
+            <input type="text" id="budget-category" placeholder="Category" required>
+            <input type="number" id="budget-amount" placeholder="Budget Amount" required>
+            <button type="submit">Set Budget</button>
+        </form>
+        <ul id="budget-list"></ul>
+    </section>
+    <section id="spending-analysis">
+        <h2>Spending Analysis</h2>
+        <canvas id="expense-chart"></canvas>
+    </section>
+    
+
+    <section id="savings-goals">
+        <h2>Savings Goals</h2>
+        <form id="savings-form">
+            <input type="text" id="goal-name" placeholder="Goal Name" required>
+            <input type="number" id="goal-amount" placeholder="Goal Amount" required>
+            <input type="date" id="goal-date" required>
+            <button type="submit">Set Goal</button>
+        </form>
+        <ul id="goals-list"></ul>
+    </section>
+
+    <section id="bill-reminders">
+        <h2>Upcoming Bills & Reminders</h2>
+        <ul id="reminders-list"></ul>
+        <form id="add-bill-form">
+            <input type="text" id="bill-description" placeholder="Bill Description" required>
+            <input type="date" id="bill-date" required>
+            <input type="number" id="bill-amount" placeholder="Amount" required>
+            <button type="submit">Add Bill</button>
+        </form>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

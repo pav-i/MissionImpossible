@@ -1,72 +1,108 @@
-/* Basic Reset */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    background: #f4f4f4;
 }
 
 nav {
-    background-color: #4CAF50;
+    background: #4CAF50;
     color: white;
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: center;
+    list-style: none;
+    padding: 0;
 }
 
-nav li {
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px;
 }
 
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-header {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.overview {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.card {
+section {
     background: white;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px;
+    border-radius: 8px;
 }
 
-.charts {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
+h1, h2 {
+    text-align: center;
 }
 
-#expense-chart, #savings-chart {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
+input, button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tr:hover {
+    background: #ddd;
+}
+#spending-analysis {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#expense-chart {
+    max-width: 100%;
+}
+#expense-chart {
+    width: 80%; /* Adjust percentage as needed */
+    max-width: 600px; /* Or set a fixed size */
+    height: 300px; /* Control height */
+    margin: 0 auto; /* Center it */
 }

@@ -1,0 +1,11 @@
+Date,Description,Category,Amount,Type
+2025-03-01,Groceries,Food,1500,Debit
+2025-03-03,Salary,Income,50000,Credit
+2025-03-05,Electricity Bill,Utilities,2500,Debit
+2025-03-07,Movie Night,Entertainment,1200,Debit
+2025-03-10,Rent,Living,15000,Debit
+2025-03-12,Freelance Payment,Income,10000,Credit
+2025-03-15,Shopping,Clothing,3000,Debit
+2025-03-18,Internet Bill,Utilities,1000,Debit
+2025-03-20,Investment,Finance,5000,Debit
+2025-03-25,Medical Insurance,Healthcare,7000,Debit
