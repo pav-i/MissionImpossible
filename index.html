@@ -7,19 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    
     <nav>
         <ul>
-            <li><a href="#dashboard">Dashboard</a></li>
+            
             <li><a href="#expense-tracker">Expense Tracker</a></li>
             <li><a href="#budget-planner">Budget Planner</a></li>
             <li><a href="#savings-goals">Savings Goals</a></li>
             <li><a href="#bill-reminders">Bill Reminders</a></li>
+            <li><a href="#pinktax">Pink Tax</a></li>
         </ul>
     </nav>
+    
+    <h2>EmpowerHer Wallet</h2>
+    
+    <div class="carousel" style="background-color: #f6dfd8;">
+        
+        <div class="carousel-container" id="news-container">
+        </div>
+    </div>
 
-    <section id="dashboard">
-    </section>
-
+    <div class="dots" id="dots-container">
+    </div>
     <section id="expense-tracker">
         <h2>Expense Tracker</h2>
         <input type="file" id="file-input" accept=".csv">
@@ -43,6 +52,10 @@
             <input type="text" id="budget-category" placeholder="Category" required>
             <input type="number" id="budget-amount" placeholder="Budget Amount" required>
             <button type="submit">Set Budget</button>
+            <button id="track-budget-btn">Track</button>
+            <canvas id="budget-chart"></canvas>
+            <div id="chart-container"></div>
+
         </form>
         <ul id="budget-list"></ul>
     </section>
@@ -52,7 +65,7 @@
     </section>
     
 
-    <section id="savings-goals">
+    <section id="saving-goal">
         <h2>Savings Goals</h2>
         <form id="savings-form">
             <input type="text" id="goal-name" placeholder="Goal Name" required>
@@ -72,6 +85,17 @@
             <input type="number" id="bill-amount" placeholder="Amount" required>
             <button type="submit">Add Bill</button>
         </form>
+    </section>
+    
+
+    <section>
+        <h1>Pink Tax Calculator 💰💄</h1>
+    <p>Check if a product has a price difference based on gender.</p>
+
+    <input type="text" id="productInput" placeholder="Enter product (e.g., shampoo, razor)">
+    <button onclick="calculatePinkTax()">Check Pink Tax</button>
+
+    <div id="result" class="result"></div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

@@ -1,13 +1,15 @@
+/* General Reset */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #f4f4f4;
+    background: #E3C5BB; /* Soft background */
 }
 
+/* Navigation Bar */
 nav {
-    background: #4CAF50;
+    background: #764248; /* Dark theme color */
     color: white;
     padding: 1rem 0;
 }
@@ -27,8 +29,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
+nav ul li a:hover {
+    color: #DDA3B2; /* Light accent */
+}
+
+/* Sections */
 section {
     background: white;
     margin: 20px auto;
@@ -39,13 +47,15 @@ section {
     border-radius: 8px;
 }
 
+/* Headings */
 h1, h2 {
     text-align: center;
+    color: #0B3954; /* Deep navy */
 }
 
+/* Input Fields & Buttons */
 input, button {
-    display: block;
-    width: 100%;
+    width: 97%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -53,22 +63,25 @@ input, button {
 }
 
 button {
-    background: #4CAF50;
+    background: #764248;
     color: white;
     border: none;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #45a049;
+    background: #DDA3B2;
 }
 
+/* Lists */
 ul {
     list-style: none;
     padding: 0;
 }
 
+/* Tables */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -81,7 +94,7 @@ th, td {
 }
 
 th {
-    background: #4CAF50;
+    background: #764248;
     color: white;
 }
 
@@ -92,17 +105,140 @@ tr:nth-child(even) {
 tr:hover {
     background: #ddd;
 }
+
+/* News Container */
+#news-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fcf7f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual News Item */
+.news-item {
+    border-bottom: 1px solid #764248;
+    padding: 15px 0;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+/* News Title */
+.news-item h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #0B3954;
+}
+
+.news-item h3 a {
+    text-decoration: none;
+    color: #0B3954;
+    transition: color 0.3s;
+}
+
+.news-item h3 a:hover {
+    color: #764248;
+}
+
+/* Description */
+.news-item p {
+    font-size: 14px;
+    color: #764248;
+    line-height: 1.5;
+}
+
+/* Spending Analysis */
 #spending-analysis {
     text-align: center;
     margin: 20px auto;
 }
 
+/* Expense Chart */
 #expense-chart {
-    max-width: 100%;
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    margin: 0 auto;
 }
-#expense-chart {
-    width: 80%; /* Adjust percentage as needed */
-    max-width: 600px; /* Or set a fixed size */
-    height: 300px; /* Control height */
-    margin: 0 auto; /* Center it */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        width: 95%;
+    }
+}
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 80%;
+    height: 50vh; /* 50% of viewport height */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color : #dd3ab7;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color : #dd3ab7;
+}
+
+.news-item {
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* Dots Indicator */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: black;
 }
